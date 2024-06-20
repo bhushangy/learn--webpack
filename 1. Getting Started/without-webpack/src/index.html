@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="header">Hey this is my first webpack application !!</h1>
+    <ul id="shoppingList"></ul>
+    <button id="button1">Click me</button>
+</body>
+<script src="index.js"></script>
+<!-- In the absense of a package manager and a bundler, you have to load the dependecies at run time -->
+<!-- This approach has its own share of issues -->
+<!-- Web vitals like FCP, LCP take a hit if the dependecy is big in size -->
+<!-- Even if you are not using all of the functions in the dependency, you still have to load the entire lib -->
+<!-- You cannot take advantage of the HTTPS 2.2 parallel connections at a time to the same domain -->
+<!-- HTTP/2 allows multiple streams within a single connection, meaning multiple requests and responses can be in-flight simultaneously over one TCP connection. -->
+<!-- If you are loading via CDN, then you need to open one TCP connection for each domain which is resource intensive -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</html>
