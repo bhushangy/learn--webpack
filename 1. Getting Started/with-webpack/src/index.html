@@ -9,12 +9,18 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <h1 id="header">Hey this is my first webpack application !!</h1>
+  <ul id="shoppingList"></ul>
+  <!-- <button onclick="buttonClickHandler()">Click me</button> -->
+  <!-- The above buttonClickHandler() will not work because it call comes down to IIFE -->
+  <!-- You see in the bundle.js file, all your js code in the index.js file is wrapped within an IIFE -->
+  <!-- Now, as we all know, it is not possible to access any variables, functions inside IIFE. But an IIFE can access variables and functions outside of the IIFE -->
+  <!-- So buttonClickHandler() is not in the global scope. It is inside IIFE. So you will get ReferenceError when you click the button -->
+  <!-- To solve this, add an event listner to the button itself -->
+  <!-- So as soon as the bundle is loaded, the IIFE is executed. Since the code inside IIFE can access outside code, it has access to all the DOM apis  -->
+  <!-- So event listener is attached to the button element -->
+  <button id="button1">Click me</button>
 </body>
-<script src="index.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
-  integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- <script src="../dist/bundle.js"></script> -->
+<script src="../dist/bundle.js"></script>
 
 </html>
