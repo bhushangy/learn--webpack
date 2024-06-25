@@ -6,3 +6,17 @@
 :global(.button){
   background: yellow;
 }
+
+/* If you are not using css modules, then css-loader converts this file into a javascript module and exports the styles as a string */
+/* The same class is injected into the style tag inside the index.html file */
+
+/* 
+    
+  module.exports = `
+     .button {
+      background: red;
+    }
+`;
+
+
+*/

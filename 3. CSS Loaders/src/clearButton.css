@@ -1,3 +1,16 @@
 .button {
   background: red;
 }
+
+/* If you are using css modules, then css-loader will generate a unique class name for each css declaration and export
+an object with original name as key and hashed name as value */
+
+/* Source maps are created for debugging purposes and the hashed classes are injected into the HTML file */
+
+/* 
+
+module.exports = {
+    button: 'button__jhsdgjhvhgysjdgjSAXSAX';
+};
+
+*/

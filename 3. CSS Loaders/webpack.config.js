@@ -12,7 +12,7 @@ module.exports = {
         test: /.css$/, // regex for the file types that you need to match for this rule to use the loader
         use: [
           { loader: "style-loader" }, // these loader are not built into webpack, you need to get it from npm
-          { loader: "css-loader", options: { modules: true } },
+          { loader: "css-loader", options: { modules: true } }, // enabling css modules
         ],
       },
     ],
