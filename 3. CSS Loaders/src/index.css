@@ -2,11 +2,12 @@
   text-decoration: underline;
   color: blue;
 }
+
 /* This header will also be hashed. So unless you import this file as styles and do style.header, then this style will not be applied */
 /* https://codesandbox.io/s/ids-with-css-modules-in-react-eishp?file=/src/MyComponent.module.css */
 /* Or you have to wrap this also within global */
 
-:global(.button){
+:global(.button) {
   background: yellow;
 }
 
@@ -23,3 +24,10 @@
 
 
 */
+
+
+.container {
+  height: 100px;
+  width: 100px;
+  background: red;
+}

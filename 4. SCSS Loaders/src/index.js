@@ -19,4 +19,4 @@ btn1.addEventListener("click", function () {
   });
 });
 
-btn1.classList.add([style.button]);
+btn1.classList.add(['button']); // This is from the global style

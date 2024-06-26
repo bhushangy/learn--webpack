@@ -6,10 +6,11 @@ const el1 = document.createElement("button");
 const el2 = document.createElement("button");
 el1.innerHTML = "Clear";
 el2.innerHTML = "Submit";
-el2.classList.add([indexStyles.button2]);
+el2.classList.add([indexStyles.button]);
 el1.classList.add([style.button]);
 // The style with style.button(hashed) class name will be injected into HTML by style-loader
 el1.onclick = function () {
   alert("Clear clicked");
 };
-document.body.appendChild(el);
+document.body.appendChild(el1);
+document.body.appendChild(el2);
